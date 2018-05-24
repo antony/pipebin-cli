@@ -22,7 +22,7 @@ jobs:
 
       - run:
           name: Eslint
-          command: npm run lint:ci
+          command: npm run lint
 
       - store_test_results:
           path: reports/junit
