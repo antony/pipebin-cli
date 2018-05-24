@@ -1,0 +1,24 @@
+{
+  "name": "pipebin",
+  "version": "1.0.0",
+  "description": "Pipeb.in CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pipebin",
+    "pipeb-in",
+    "cli"
+  ],
+  "author": "Antony Jones",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "unquirer": "^1.0.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.1.2"
+  }
+}
