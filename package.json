@@ -1,6 +1,6 @@
 {
   "name": "pipebin",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Pipeb.in CLI",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,9 @@
   },
   "devDependencies": {
     "node-fetch": "^2.1.2"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/antony/pipebin-cli.git"
   }
 }
