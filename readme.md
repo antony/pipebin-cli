@@ -28,5 +28,5 @@ You can also do things with the contents
 
 ```bash
 pb BqStMv > /tmp/mydate.txt
-# Will return your pipe contents
+# Will pipe your previously piped contents into the file /tmp/mydate.txt
 ```
