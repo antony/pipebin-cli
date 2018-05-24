@@ -1,6 +1,6 @@
 {
   "name": "pipebin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pipeb.in CLI",
   "main": "index.js",
   "scripts": {
