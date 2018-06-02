@@ -4,6 +4,7 @@
   "description": "Pipeb.in CLI",
   "main": "index.js",
   "scripts": {
+    "cli": "node .",
     "test": "mocha .",
     "lint": "standard ."
   },
@@ -20,7 +21,9 @@
   "dependencies": {
     "inquirer": "^5.2.0",
     "node-fetch": "^2.1.2",
+    "ora": "^2.1.0",
     "unquirer": "^1.0.0",
+    "ws": "^5.2.0",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
