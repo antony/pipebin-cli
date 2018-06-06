@@ -78,7 +78,7 @@ jobs:
               done
             }
 
-            function build_mac_win () {
+            function build () {
               local platforms=("win" "macos" "linux")
               local architectures=("x64")
               build_asset
