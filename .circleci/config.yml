@@ -85,7 +85,7 @@ jobs:
 
             function build_linux () {
               local platforms=("linux")
-              local architectures=("x86" "x64" "armv7")
+              local architectures=("x64")
               build_asset
             }
 
