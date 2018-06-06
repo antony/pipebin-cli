@@ -29,8 +29,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "github-release-cli": "^0.4.1",
-    "grizzly": "^3.0.3",
+    "gh-release": "^3.2.1",
     "pkg": "^4.3.1",
     "standard": "^11.0.1"
   },
