@@ -8,7 +8,7 @@
     "test": "mocha .",
     "lint": "standard .",
     "build:executable": "pkg . --target $EXEC_TARGET --output $EXEC_OUTPUT",
-    "github:publish-release": "publish-release --token $GITHUB_RELEASE_TOKEN"
+    "github:publish-release": "publish-release --token $GITHUB_RELEASE_TOKEN --tag $CIRCLE_TAG"
   },
   "bin": {
     "pb": "./lib/cli.js"

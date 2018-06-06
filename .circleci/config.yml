@@ -92,7 +92,7 @@ jobs:
             build_mac_win
             build_linux
             
-            npm run github:publish-release --token $GITHUB_RELEASE_TOKEN --assets $(join_by ',' $BUILDS)
+            npm run github:publish-release -- --assets $(join_by ',' $BUILDS)
 
 workflows:
   version: 2
