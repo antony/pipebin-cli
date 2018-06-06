@@ -8,7 +8,7 @@
     "test": "mocha .",
     "lint": "standard .",
     "build:executable": "pkg . --target $EXEC_TARGET --output $EXEC_OUTPUT",
-    "github:publish-release": "publish-release --token $GITHUB_RELEASE_TOKEN --tag $CIRCLE_TAG"
+    "github:publish-release": "gh-release --token $GITHUB_RELEASE_TOKEN --body \"Automatically released by CircleCI\" --assets"
   },
   "bin": {
     "pb": "./lib/cli.js"
@@ -29,8 +29,9 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "github-release-cli": "^0.4.1",
+    "grizzly": "^3.0.3",
     "pkg": "^4.3.1",
-    "publish-release": "^1.5.1",
     "standard": "^11.0.1"
   },
   "repository": {

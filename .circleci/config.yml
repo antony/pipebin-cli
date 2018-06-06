@@ -65,6 +65,7 @@ jobs:
               shift
               printf "%s" "${@/#/$d}"
             }
+
             function build_asset () {
               for platform in ${platforms[@]}
               do 
@@ -78,21 +79,14 @@ jobs:
             }
 
             function build_mac_win () {
-              local platforms=("win" "macos")
-              local architectures=("x86" "x64")
-              build_asset
-            }
-
-            function build_linux () {
-              local platforms=("linux")
+              local platforms=("win" "macos" "linux")
               local architectures=("x64")
               build_asset
             }
 
-            build_mac_win
-            build_linux
+            build
             
-            npm run github:publish-release -- --assets $(join_by ',' $BUILDS)
+            npm run github:publish-release -- $(join_by ',' $BUILDS)
 
 workflows:
   version: 2
