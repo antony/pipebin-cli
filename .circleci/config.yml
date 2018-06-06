@@ -43,6 +43,46 @@ jobs:
           name: Publish to NPM
           command: npm publish
 
+      - run:
+          name: Build executables
+          command: |
+            BUILDS=""
+            function join_by {
+              local d=$1
+              shift
+              echo -n "$1"
+              shift
+              printf "%s" "${@/#/$d}"
+            }
+            function build_asset () {
+              for platform in ${platforms[@]}
+              do 
+                  for arch in ${architectures[@]}
+                  do
+                    ASSET=./build/$platform/$arch/pb
+                    EXEC_TARGET="node9-$platform-$arch" EXEC_OUTPUT=$ASSET npm run build:executable
+                    BUILDS="$BUILDS $ASSET"
+                  done
+              done
+            }
+
+            function build_mac_win () {
+              local platforms=("win" "macos")
+              local architectures=("x86" "x64")
+              build_asset
+            }
+
+            function build_linux () {
+              local platforms=("linux")
+              local architectures=("x86" "x64" "armv7")
+              build_asset
+            }
+
+            build_mac_win
+            build_linux
+            
+            npm run github:publish-release --token $GITHUB_RELEASE_TOKEN --assets $(join_by ',' $BUILDS)
+
 workflows:
   version: 2
   main:

@@ -6,7 +6,9 @@
   "scripts": {
     "cli": "node .",
     "test": "mocha .",
-    "lint": "standard ."
+    "lint": "standard .",
+    "build:executable": "pkg . --target $EXEC_TARGET --output $EXEC_OUTPUT",
+    "github:publish-release": "publish-release --token $GITHUB_RELEASE_TOKEN"
   },
   "bin": {
     "pb": "./lib/cli.js"
@@ -27,6 +29,8 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "pkg": "^4.3.1",
+    "publish-release": "^1.5.1",
     "standard": "^11.0.1"
   },
   "repository": {
